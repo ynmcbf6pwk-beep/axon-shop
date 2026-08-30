@@ -9,7 +9,7 @@ const AxonShop = (() => {
   const normalize = (store) => ({ ...store, products: (store.products || []).map((product) => ({ ...product, variants: Array.isArray(product.variants) ? product.variants : [], sizes: Array.isArray(product.sizes) ? product.sizes : [] })) });
   async function getStore() { const response = await fetch('/api/store'); const payload = await response.json(); if (!payload.initialized) { const local = oldStore(); if (local) { const migrated = normalize(local); await saveStore(migrated); return migrated; } } return normalize(payload.store || defaults); }
   async function saveStore(store) { await fetch('/api/store', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ store }) }); localStorage.setItem(STORAGE, JSON.stringify(store)); }
-  const whatsappUrl = (product, color = '') => `https://wa.me/21676419472?text=${encodeURIComponent(`Hi Axon, I would like to order the ${product.name}${color ? ` in ${color}` : ''}.`)}`;
+  const whatsappUrl = (product, color = '') => `https://wa.me/96176419472?text=${encodeURIComponent(`Hi Axon, I would like to order the ${product.name}${color ? ` in ${color}` : ''}.`)}`;
   const colorMarkup = (product) => (product.variants || []).length ? `<div class="color-dots" aria-label="Available colors">${product.variants.map((variant) => `<span class="color-dot" style="--swatch:${esc(variant.hex)}" title="${esc(variant.name)}"></span>`).join('')}</div>` : '';
 
   async function initShop() {
