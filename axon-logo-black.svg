@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="AXON logo black">
+  <title>AXON logo black</title>
+  <g fill="none" stroke="#111313" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M60 220 L160 60 L260 220"/>
+    <path d="M100 220 L160 120 L220 220"/>
+    <path d="M82 180 L160 90 L238 180"/>
+    <path d="M160 60 L160 220"/>
+  </g>
+</svg>

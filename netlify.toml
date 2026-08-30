@@ -1,0 +1,11 @@
+[build]
+publish = "."
+command = "npm install"
+
+[[redirects]]
+from = "/*"
+to = "/shop.html"
+status = 200
+
+[context.production]
+  environment = { SUPABASE_URL = "https://icytzpuqsmwcktwtocje.supabase.co" }
