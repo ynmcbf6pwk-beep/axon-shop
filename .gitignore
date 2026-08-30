@@ -1,0 +1,6 @@
+.env
+axon.db
+axon.db-shm
+axon.db-wal
+store.json
+node_modules/
